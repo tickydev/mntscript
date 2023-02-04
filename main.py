@@ -55,9 +55,11 @@ if __name__ == '__main__':
     conc = THREADS / 1000 # thats a visual param
     
     # PROXIES
-    # https://raw.githubusercontent.com/tickydev/socks5-and-useragents/main/allprox.txt : 6.8k proxies
-    # https://raw.githubusercontent.com/tickydev/socks5-and-useragents/main/prox.txt : 364 proxies
-    # https://raw.githubusercontent.com/tickydev/socks5-and-useragents/main/bestprox.txt : 444 proxies
+    # https://raw.githubusercontent.com/tickydev/socks5-and-useragents/main/bestproxy4_socks5.txt : 364 proxies
+    # https://raw.githubusercontent.com/tickydev/socks5-and-useragents/main/bestproxy3_socks5.txt : 70 proxies
+    # https://raw.githubusercontent.com/tickydev/socks5-and-useragents/main/bestproxy2_socks5.txt : 39 proxies
+    # https://raw.githubusercontent.com/tickydev/socks5-and-useragents/main/bestproxy_socks5.txt : 444 proxies
+    # https://raw.githubusercontent.com/tickydev/socks5-and-useragents/main/allproxy_socks5.txt : 6817 proxies
     
     print(f"{fg(99)}███╗░░░███╗███╗░░██╗████████╗\n████╗░████║████╗░██║╚══██╔══╝\n██╔████╔██║██╔██╗██║░░░██║░░░\n██║╚██╔╝██║██║╚████║░░░██║░░░\n██║░╚═╝░██║██║░╚███║░░░██║░░░\n╚═╝░░░░░╚═╝╚═╝░░╚══╝░░░╚═╝░░░\n{attr(0)}") # logo
     print(f"{fg(54)}" + razdel + f"{attr(0)}")
